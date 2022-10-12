@@ -7,17 +7,40 @@
     android:background="@android:color/holo_blue_light"
     tools:context=".LoginActivity">
 
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
         android:id="@+id/txtEmail"
-        android:layout_width="186dp"
-        android:layout_height="54dp"
-        tools:layout_editor_absoluteX="164dp"
-        tools:layout_editor_absoluteY="360dp"
-        app:hintEnabled="false">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="188dp" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-             />
-    </com.google.android.material.textfield.TextInputLayout>
+    <EditText
+        android:id="@+id/txtPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="296dp" />
+
+    <TextView
+        android:id="@+id/lblEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_lbl_email"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="201dp" />
+
+    <TextView
+        android:id="@+id/lblPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_lbl_password"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="310dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

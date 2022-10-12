@@ -2,4 +2,6 @@
     <string name="app_name">Home Cook</string>
     <string name="main_btn_register">Register</string>
     <string name="main_btn_login">Log In</string>
+    <string name="login_lbl_email">Email</string>
+    <string name="login_lbl_password">Password</string>
 </resources>
