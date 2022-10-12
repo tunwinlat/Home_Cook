@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Home Cook</string>
+    <string name="main_btn_register">Register</string>
+    <string name="main_btn_login">Log In</string>
 </resources>
