@@ -9,7 +9,6 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -31,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        tvEmail = findViewById(R.id.txtEmail);
+        tvEmail = findViewById(R.id.txtRegEmail);
         tvPassword = findViewById(R.id.txtPassword);
         btnLogin = findViewById(R.id.btnLogin2);
 
