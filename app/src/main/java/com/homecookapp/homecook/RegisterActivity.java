@@ -49,10 +49,7 @@ public class RegisterActivity extends AppCompatActivity {
                     userRegister();
                 }
                 else {
-                    Toast.makeText(getApplicationContext(),
-                                    "Password mismatch!!",
-                                    Toast.LENGTH_LONG)
-                            .show();
+                    tvPassword2.setError("Password Mismatch!!");
                     tvPassword2.requestFocus();
                 }
             }
@@ -69,18 +66,14 @@ public class RegisterActivity extends AppCompatActivity {
         String name = tvName.getText().toString();
 
         if(TextUtils.isEmpty(email)){
-            Toast.makeText(getApplicationContext(),
-                            "Please enter email!!",
-                            Toast.LENGTH_LONG)
-                    .show();
+            tvEmail.setError("Please enter a valid email!!");
+            tvEmail.requestFocus();
             return;
         }
 
         if (TextUtils.isEmpty(password)) {
-            Toast.makeText(getApplicationContext(),
-                            "Please enter password!!",
-                            Toast.LENGTH_LONG)
-                    .show();
+            tvPassword1.setError("Please enter password");
+            tvPassword1.requestFocus();
             return;
         }
 
