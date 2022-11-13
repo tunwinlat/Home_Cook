@@ -97,9 +97,9 @@ public class RegisterActivity extends AppCompatActivity {
                         //DatabaseReference referenceProfile = FirebaseDatabase.getInstance().getReference("Registered Users");
 
                         FirebaseDatabase database = FirebaseDatabase.getInstance();
-                        DatabaseReference referenceProfile = database.getReference("Registered Users");
+                        DatabaseReference referenceProfile = database.getReference("RegisteredUsers");
 
-                        referenceProfile.child(mUser.getUid()).setValue(writeUserDetails.getName()).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        referenceProfile.child(mUser.getUid()).setValue(writeUserDetails).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
 
