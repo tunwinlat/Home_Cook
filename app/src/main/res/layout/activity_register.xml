@@ -62,7 +62,7 @@
         android:id="@+id/txtRegUserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Username:"
+        android:text="Name:"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/txtRegEmail"
         app:layout_constraintEnd_toEndOf="parent"
@@ -71,7 +71,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnRegister2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Submit"
@@ -89,7 +89,7 @@
         android:layout_marginStart="15dp"
         android:autofillHints=""
         android:ems="10"
-        android:hint="Please enter username"
+        android:hint="Please enter Full Name"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColorHint="#757575"
@@ -123,9 +123,10 @@
         android:id="@+id/txtfieldPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:ems="10"
         android:hint="Please enter password"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:minHeight="48dp"
         android:textColorHint="#757575"
         android:textSize="16sp"
@@ -134,16 +135,16 @@
         app:layout_constraintHorizontal_bias="0.12"
         app:layout_constraintStart_toEndOf="@+id/txtRegPassword"
         app:layout_constraintTop_toBottomOf="@+id/txtTitle"
-        app:layout_constraintVertical_bias="0.938"
-        android:autofillHints="" />
+        app:layout_constraintVertical_bias="0.938" />
 
     <EditText
         android:id="@+id/txtfieldReenterPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:ems="10"
         android:hint="Please re-enter password"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:minHeight="48dp"
         android:textColorHint="#757575"
         android:textSize="16sp"
@@ -152,7 +153,6 @@
         app:layout_constraintHorizontal_bias="0.185"
         app:layout_constraintStart_toEndOf="@+id/txtRegConfirmPassword"
         app:layout_constraintTop_toBottomOf="@+id/txtTitle"
-        app:layout_constraintVertical_bias="0.407"
-        android:autofillHints="" />
+        app:layout_constraintVertical_bias="0.407" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
