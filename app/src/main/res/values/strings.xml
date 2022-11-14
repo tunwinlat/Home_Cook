@@ -6,4 +6,15 @@
     <string name="login_lbl_password">Password</string>
     <string name="RegistionInformation">Registion Information</string>
     <string name="login_btn_login">Login</string>
+    <string name="loginPage_email">Please enter email</string>
+    <string name="loginPage_password">Please enter password</string>
+    <string name="registerPage_reEnterPw_title">Re-enter password:</string>
+    <string name="registerPage_name_title">Name:</string>
+    <string name="registerPage_btnSubmit">Submit</string>
+    <string name="registerPage_emailInput">Please enter your email</string>
+    <string name="registerPage_reEnterPwInput">Please re-enter password</string>
+    <string name="registerPage_password_title">Password:</string>
+    <string name="registerPage_password">Please enter password</string>
+    <string name="registerPage_fullnameInput">Please enter Full Name</string>
+    <string name="registerPage_email_title">E-mail:</string>
 </resources>
