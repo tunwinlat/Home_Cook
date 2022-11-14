@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:elevation="5dp">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Smartherd"
+            android:textColor="@color/purple_500"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The Ontario government is supporting home-based food businesses by providing a guide on how to start a home-based food business, which includes an overview of public health requirements that need to be followed as a food operator. To further support these entrepreneurs, the government has also made regulatory changes to allow more flexibility to sell low-risk, home-prepared foods. These supports are part of the government's continued efforts to help small, independent businesses succeed and contribute to Ontario communities during COVID-19."
+            android:textColor="@color/black"
+            android:textSize="15sp"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.cardview.widget.CardView>
