@@ -65,7 +65,7 @@
                 android:paddingTop="10dp"
                 >
 
-                <include layout='@layout/item1_mainactivity_nested_scrollview'/>
+                <include layout='@layout/slideshow_mainactivity_nested_scrollview'/>
                 <include layout='@layout/item1_mainactivity_nested_scrollview'/>
                 <include layout='@layout/item1_mainactivity_nested_scrollview'/>
                 <include layout='@layout/item1_mainactivity_nested_scrollview'/>
