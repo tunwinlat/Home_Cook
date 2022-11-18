@@ -227,11 +227,11 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/btnLogin2"
+            android:id="@+id/btnSubmit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="@string/loginPage_email"
-            android:text="@string/login_btn_login"
+            android:text="@string/adApplication_Submit"
             android:layout_gravity="center"
             android:textColor="#5C6BC0"
             app:layout_constraintBottom_toBottomOf="parent"

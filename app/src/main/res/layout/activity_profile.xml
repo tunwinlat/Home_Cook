@@ -21,7 +21,6 @@
 
         <TextView
             android:id="@+id/profile_profile"
-            to
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -38,7 +37,6 @@
 
         <TextView
             android:id="@+id/profile_accountType"
-            to
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/profile_profile"
@@ -52,7 +50,6 @@
 
         <TextView
             android:id="@+id/profile_userID"
-            to
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/profile_accountType"
@@ -66,7 +63,6 @@
 
         <TextView
             android:id="@+id/profile_userName"
-            to
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/profile_userID"
@@ -80,7 +76,6 @@
 
         <TextView
             android:id="@+id/profile_email"
-            to
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/profile_userName"
@@ -94,7 +89,6 @@
 
         <TextView
             android:id="@+id/profile_regDate"
-            to
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/profile_email"
