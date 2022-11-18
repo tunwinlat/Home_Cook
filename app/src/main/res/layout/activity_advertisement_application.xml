@@ -10,76 +10,107 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Advertisement Application Form"
-        android:textSize="20dp"
-        android:layout_marginRight="@dimen/mr"
         android:layout_marginLeft="@dimen/ml"
-        android:gravity="center"/>
-
-<com.google.android.material.textfield.TextInputLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-    android:hint="Merchant ID:"
-    app:boxStrokeColor="@color/black">
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/merchant_id"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:singleLine="true"
-        android:textColor="@color/black" />
-
-
-</com.google.android.material.textfield.TextInputLayout>
+        android:layout_marginRight="@dimen/mr"
+        android:gravity="center"
+        android:text="Advertisement Application Form"
+        android:textSize="20dp" />
 
     <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="Merchant ID:"
+        app:boxStrokeColor="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/merchant_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="@color/black" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:hint="Merchant Name:"
         app:boxStrokeColor="@color/black">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/merchant_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
             android:inputType="text"
             android:singleLine="true"
+            android:textColor="@color/black"
             />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="15dp"
+            android:text="Slot Location"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:hint="Ad Title:"
         app:boxStrokeColor="@color/black">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/ad_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
             android:inputType="text"
             android:singleLine="true"
-            />
+            android:textColor="@color/black" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Start Date"
-        android:textSize="20dp"
-        />
+        android:text="Ad Start Date"
+        android:textSize="15dp" />
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18dp"
         android:hint="date-month-year"
-        />
+        android:textSize="18dp" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ad End Date"
+        android:textSize="15dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="date-month-year"
+        android:textSize="18dp" />
+
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
@@ -97,15 +128,6 @@
 
 
     </com.google.android.material.textfield.TextInputLayout>
-
-
-
-
-
-
-
-
-
 
 
 </LinearLayout>
