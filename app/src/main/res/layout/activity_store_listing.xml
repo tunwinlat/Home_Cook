@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".HomeActivity">
+    tools:context=".Store_Listing_Activity">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
@@ -97,6 +97,7 @@
 
             </LinearLayout>
             <androidx.recyclerview.widget.RecyclerView
+                android:layout_margin="10dp"
                 android:id="@+id/store_listing"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
