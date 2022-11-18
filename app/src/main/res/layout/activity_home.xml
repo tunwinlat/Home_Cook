@@ -42,9 +42,9 @@
 
             <androidx.appcompat.widget.SearchView
                 android:id="@+id/searchView"
+                android:layout_gravity="center"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="95dp"
                 android:background="@drawable/curvedsearchview"
                 app:queryHint="Search here..." />
         </androidx.appcompat.widget.Toolbar>
@@ -66,18 +66,29 @@
                 >
 
                 <include layout='@layout/slideshow_mainactivity_nested_scrollview'/>
-                <include layout='@layout/item1_mainactivity_nested_scrollview'/>
-                <include layout='@layout/item1_mainactivity_nested_scrollview'/>
-                <include layout='@layout/item1_mainactivity_nested_scrollview'/>
 
+                <TextView
+                    android:id="@+id/textViewCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_categories_title"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="30dp"
+                    />
 
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/categoryView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <include layout='@layout/item1_mainactivity_nested_scrollview'/>
+                <include layout='@layout/item1_mainactivity_nested_scrollview'/>
+                <include layout='@layout/item1_mainactivity_nested_scrollview'/>
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
-
-
-
-
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 

@@ -17,4 +17,6 @@
     <string name="registerPage_password">Please enter password</string>
     <string name="registerPage_fullnameInput">Please enter Full Name</string>
     <string name="registerPage_email_title">E-mail:</string>
+    <string name="home_categories_title">Categories</string>
+    <string name="storelisting_merchants_result_title">Merchants Result</string>
 </resources>
