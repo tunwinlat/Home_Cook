@@ -23,7 +23,7 @@
         </activity>
         <activity
             android:name=".Advertisement_application_Activity"
-            android:exported="false">
+            android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
