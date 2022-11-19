@@ -87,12 +87,11 @@
                     android:layout_centerVertical="true"
                     android:layout_marginStart="10dp"
 
-                    android:layout_marginLeft="15dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginEnd="10dp"
                     android:layout_marginBottom="5dp"
-                    android:layout_toRightOf="@+id/profile_pic"
-                    android:text="{Name} Profile"
+                    android:layout_toEndOf="@+id/profile_pic"
+                    android:text="@string/userProfile_Username"
                     android:textColor="@color/green"
                     android:textSize="20dp" />
 
@@ -104,10 +103,9 @@
                     android:layout_centerVertical="true"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_toRightOf="@+id/profile_pic"
-                    android:text="profile_accountType"
-                    android:textSize="14dp" />
+                    android:layout_toEndOf="@+id/profile_pic"
+                    android:text="@string/userProfile_AccountType"
+                    android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/profile_userID"
@@ -116,11 +114,10 @@
                     android:layout_below="@+id/profile_accountType"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
 
-                    android:layout_toRightOf="@+id/profile_pic"
-                    android:text="UserID is: "
-                    android:textSize="14dp" />
+                    android:layout_toEndOf="@+id/profile_pic"
+                    android:text="@string/userProfile_UserID"
+                    android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/profile_userName"
@@ -130,10 +127,9 @@
                     android:layout_centerVertical="true"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_toRightOf="@+id/profile_pic"
-                    android:text="userName:"
-                    android:textSize="14dp" />
+                    android:layout_toEndOf="@+id/profile_pic"
+                    android:text="@string/userProfile_Username2"
+                    android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/profile_email"
@@ -143,10 +139,9 @@
                     android:layout_centerVertical="true"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_toRightOf="@+id/profile_pic"
-                    android:text="email:"
-                    android:textSize="14dp" />
+                    android:layout_toEndOf="@+id/profile_pic"
+                    android:text="@string/userProfile_UserEmail"
+                    android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/profile_regDate"
@@ -156,10 +151,9 @@
                     android:layout_centerVertical="true"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_toRightOf="@+id/profile_pic"
-                    android:text="RegDate:"
-                    android:textSize="14dp" />
+                    android:layout_toEndOf="@+id/profile_pic"
+                    android:text="@string/userProfile_regDate"
+                    android:textSize="14sp" />
 
 
             </RelativeLayout>
@@ -167,18 +161,17 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Change Password"
+                android:text="@string/userProfile_ChangePasswordTitle"
                 android:layout_marginTop="20dp"
                 android:textSize="20sp"
                 android:textColor="@color/green"
-                android:layout_marginLeft="10dp"
-                ></TextView>
+                android:layout_marginStart="10dp" />
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Old Password:"
+                android:hint="@string/userProfile_OldPasswordHInt"
                 app:boxStrokeColor="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -197,7 +190,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="New Password:"
+                android:hint="@string/userProfile_NewPasswordHint"
                 app:boxStrokeColor="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -250,18 +243,17 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Report"
+                android:text="@string/userProfile_ReportTitle"
                 android:layout_marginTop="20dp"
                 android:textSize="20sp"
                 android:textColor="@color/green"
-                android:layout_marginLeft="10dp"
-                ></TextView>
+                android:layout_marginStart="10dp" />
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Report Title:"
+                android:hint="@string/userProfile_ReportTitleHint"
                 app:boxStrokeColor="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -280,7 +272,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Report Description:"
+                android:hint="@string/userProfile_ReportDescriptionHint"
                 app:boxStrokeColor="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -308,7 +300,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="15dp"
                     android:layout_weight="1"
-                    android:text="Report Categories"
+                    android:text="userProfile_ReportCategoryTitle"
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

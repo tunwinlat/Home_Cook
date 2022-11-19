@@ -74,8 +74,8 @@
                     android:id="@+id/merchantTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:text="Merchant's Name"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/productListing_MerchantName"
                     android:textColor="#000000"
                     android:textSize="25sp"
                     android:textStyle="bold"
@@ -92,7 +92,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
-                    android:text="Merchant ID: {keyword}"
+                    android:text="@string/productListing_MerchantID"
                     android:textColor="#000000"
                     android:textSize="12sp"
                     android:textStyle="italic"
@@ -105,7 +105,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
-                    android:text="Merchant Status: {keyword}"
+                    android:text="@string/productListing_MerchantStatus"
                     android:textColor="#000000"
                     android:textSize="12sp"
                     android:textStyle="italic"
@@ -118,7 +118,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
-                    android:text="Merchant's total products: {keyword}"
+                    android:text="@string/productListing_MerchantTotalProducts"
                     android:textColor="#000000"
                     android:textSize="12sp"
                     android:textStyle="italic"
@@ -150,7 +150,7 @@
                         android:layout_alignParentTop="true"
                         android:layout_centerHorizontal="true"
                         android:layout_gravity="center_vertical"
-                        android:src="@drawable/cat_1"></ImageView>
+                        android:src="@drawable/cat_1" />
 
                 </androidx.cardview.widget.CardView>
 

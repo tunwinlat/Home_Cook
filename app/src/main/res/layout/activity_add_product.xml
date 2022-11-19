@@ -69,24 +69,25 @@
             tools:context=".Advertisement_application_Activity">
 
             <TextView
+                android:id="@+id/addproduct_pageTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="30dp"
                 android:gravity="center"
-                android:text="Edit your product"
+                android:text="@string/addproduct_pageTitle"
                 android:textColor="@color/green"
-                android:textSize="30dp"
+                android:textSize="30sp"
                 android:textStyle="bold" />
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Product ID"
+                android:hint="@string/addproduct_ProductIDHint"
                 app:boxStrokeColor="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/Product_id"
+                    android:id="@+id/addproduct_ProductID"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/custom_input"
@@ -101,11 +102,11 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Product Name:"
+                android:hint="@string/addproduct_ProductNameHint"
                 app:boxStrokeColor="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/Product_name"
+                    android:id="@+id/addproduct_ProductName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/custom_input"
@@ -118,7 +119,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Product Quantity:"
+                android:hint="@string/addproduct_ProductQualtityHint"
                 app:boxStrokeColor="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -138,26 +139,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="Change of Ingredients"
+                android:text="@string/addproducu_ChangeOfIngredientsTitle"
                 android:textSize="15sp" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/custom_input"
-                android:hint="Name of Ingredient"
+                android:hint="@string/addproduct_IngredientName"
                 android:inputType="date"
                 android:minHeight="48dp"
                 android:paddingStart="12dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
-                android:textSize="18dp" />
+                android:textSize="18sp"
+                tools:ignore="RtlSymmetry" />
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Product Description:"
+                android:hint="@string/addproduct_ProductDescription"
                 app:boxStrokeColor="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -195,7 +197,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:hint="@string/loginPage_email"
-                android:text="Delete the Product"
+                android:text="@string/addproduct_btnDeleteProduct"
                 android:textColor="#5C6BC0"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

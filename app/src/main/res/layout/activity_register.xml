@@ -155,7 +155,8 @@
         app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toEndOf="@+id/txtRegPassword"
         app:layout_constraintTop_toBottomOf="@+id/txtTitle"
-        app:layout_constraintVertical_bias="0.919" />
+        app:layout_constraintVertical_bias="0.919"
+        tools:ignore="RtlSymmetry" />
 
     <EditText
         android:id="@+id/txtfieldReenterPassword"
@@ -177,7 +178,8 @@
         app:layout_constraintHorizontal_bias="0.096"
         app:layout_constraintStart_toEndOf="@+id/txtRegConfirmPassword"
         app:layout_constraintTop_toBottomOf="@+id/txtTitle"
-        app:layout_constraintVertical_bias="0.456" />
+        app:layout_constraintVertical_bias="0.456"
+        tools:ignore="RtlSymmetry" />
 
     <EditText
         android:id="@+id/txtfieldEmail"
@@ -199,7 +201,8 @@
         app:layout_constraintStart_toEndOf="@+id/txtRegEmail"
         app:layout_constraintTop_toBottomOf="@+id/txtTitle"
         app:layout_constraintVertical_bias="0.884"
-        android:importantForAutofill="no" />
+        android:importantForAutofill="no"
+        tools:ignore="RtlSymmetry" />
 
     <EditText
         android:id="@+id/txtfieldUsername"
@@ -221,7 +224,8 @@
         app:layout_constraintStart_toEndOf="@+id/txtRegUserName"
         app:layout_constraintTop_toBottomOf="@+id/txtTitle"
         app:layout_constraintVertical_bias="0.816"
-        android:importantForAutofill="no" />
+        android:importantForAutofill="no"
+        tools:ignore="RtlSymmetry" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
