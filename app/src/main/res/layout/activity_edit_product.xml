@@ -69,12 +69,12 @@
             tools:context=".Advertisement_application_Activity">
 
             <TextView
-                android:id="@+id/addproduct_pageTitle"
+                android:id="@+id/editproduct_pageTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="30dp"
                 android:gravity="center"
-                android:text="@string/addproduct_pageTitle"
+                android:text="@string/editProduct_PageTitle"
                 android:textColor="@color/green"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -83,7 +83,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/addproduct_ProductIDHint"
+                android:hint="@string/editProduct_ProductID"
                 app:boxStrokeColor="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -102,7 +102,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/addproduct_ProductNameHint"
+                android:hint="@string/editProduct_ProductName"
                 app:boxStrokeColor="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -119,7 +119,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/addproduct_ProductQualtityHint"
+                android:hint="@string/editProduct_ProductCategory"
                 app:boxStrokeColor="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -139,14 +139,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="@string/addproduct_ChangeOfIngredientsTitle"
+                android:text="@string/editProduct_ChangeOfIngredientsTitle"
                 android:textSize="15sp" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/custom_input"
-                android:hint="@string/addproduct_IngredientName"
+                android:hint="@string/editProduct_IngredientName"
                 android:inputType="date"
                 android:minHeight="48dp"
                 android:paddingStart="12dp"
@@ -159,7 +159,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/addproduct_ProductDescription"
+                android:hint="@string/editProduct_ProductDescription"
                 app:boxStrokeColor="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -176,7 +176,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/btnSubmit"
+                android:id="@+id/editProduct_btnSubmit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -191,6 +191,20 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.657" />
 
+            <Button
+                android:id="@+id/editProduct_buttonDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:hint="@string/loginPage_email"
+                android:text="@string/addproduct_btnDeleteProduct"
+                android:textColor="#5C6BC0"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.526"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.657" />
 
             <include layout='@layout/slideshow_mainactivity_nested_scrollview' />
         </LinearLayout>

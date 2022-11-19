@@ -26,7 +26,7 @@
     <string name="addproduct_ProductIDHint">Product ID</string>
     <string name="addproduct_ProductNameHint">Product Name:</string>
     <string name="addproduct_ProductQualtityHint">Product Quantity:</string>
-    <string name="addproducu_ChangeOfIngredientsTitle">List of Ingredients</string>
+    <string name="addproduct_ChangeOfIngredientsTitle">List of Ingredients</string>
     <string name="addproduct_IngredientName">Name of Ingredients</string>
     <string name="addproduct_ProductDescription">Product Description:</string>
     <string name="addproduct_btnDeleteProduct">Delete the Product</string>
@@ -64,4 +64,13 @@
     <string name="merchantResult_SearchResult">There are XX results founded in {keyword}</string>
     <string name="viewholder_catTitle">TextView</string>
     <string name="viewholder_productName">TextView</string>
+    <string name="editProduct_PageTitle">Edit the product</string>
+    <string name="editProduct_ProductID">Product ID:</string>
+    <string name="editProduct_ProductName">Product Name:</string>
+    <string name="editProduct_ProductCategory">Product Category:</string>
+    <string name="editProduct_ChangeOfIngredientsTitle">Changes of Ingredient:</string>
+    <string name="editProduct_IngredientName">Name of Ingredient:</string>
+    <string name="editProduct_ProductDescription">Product Desccription:</string>
+
+
 </resources>

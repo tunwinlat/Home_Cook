@@ -15,6 +15,13 @@
         android:theme="@style/Theme.HomeCook"
         tools:targetApi="31">
         <activity
+            android:name=".EditProduct_Activity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".addProduct_Activity"
             android:exported="false">
             <meta-data
