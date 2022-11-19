@@ -9,7 +9,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="280dp"
+        android:layout_height="260dp"
         android:padding="15dp">
 
         <ImageView
@@ -21,6 +21,8 @@
 
         <TextView
             android:id="@+id/profile_profile"
+            android:textColor="@color/green"
+            to
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -37,6 +39,7 @@
 
         <TextView
             android:id="@+id/profile_accountType"
+            to
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/profile_profile"
@@ -50,6 +53,7 @@
 
         <TextView
             android:id="@+id/profile_userID"
+            to
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/profile_accountType"
@@ -63,6 +67,7 @@
 
         <TextView
             android:id="@+id/profile_userName"
+            to
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/profile_userID"
@@ -76,6 +81,7 @@
 
         <TextView
             android:id="@+id/profile_email"
+            to
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/profile_userName"
@@ -89,6 +95,7 @@
 
         <TextView
             android:id="@+id/profile_regDate"
+            to
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/profile_email"
@@ -106,17 +113,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Change Password"
+        android:textColor="@color/green"
         ></TextView>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="20dp"
+        android:padding="1dp"
         android:orientation="vertical">
         <com.google.android.material.textfield.TextInputLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Old Password">
             <com.google.android.material.textfield.TextInputEditText
+                android:textColor="@color/green"
                 android:id="@+id/old_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -128,6 +138,7 @@
             android:layout_height="wrap_content"
             android:hint="New Password">
             <com.google.android.material.textfield.TextInputEditText
+                android:textColor="@color/green"
                 android:id="@+id/new_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -139,18 +150,108 @@
             android:layout_height="wrap_content"
             android:hint="Confirm Password">
             <com.google.android.material.textfield.TextInputEditText
+                android:textColor="@color/green"
                 android:id="@+id/confirm_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="confirm password"
                 />
         </com.google.android.material.textfield.TextInputLayout>
-        
+
+
         <Button
+            android:id="@+id/buttonDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Update"
+            android:textColor="#5C6BC0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.526"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.657"></Button>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Report"
+        android:textColor="@color/green"
+        ></TextView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="1dp"
+        android:orientation="vertical">
+        <com.google.android.material.textfield.TextInputLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Update"></Button>
-        
+            android:hint="Report title">
+            <com.google.android.material.textfield.TextInputEditText
+                android:textColor="@color/green"
+                android:id="@+id/report_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Please enter the details.."
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Report Content: ">
+            <com.google.android.material.textfield.TextInputEditText
+                android:textColor="@color/green"
+                android:id="@+id/report_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Please enter the details.."
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:hint="Report Category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <AutoCompleteTextView
+                android:textColor="@color/green"
+                android:id="@+id/report_categoryname1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Category1"
+                />
+            <AutoCompleteTextView
+                android:textColor="@color/green"
+                android:id="@+id/report_categoryname2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Category2"
+                />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/buttonReport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Report"
+            android:textColor="#5C6BC0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.526"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.657"></Button>
+
     </LinearLayout>
-    
+    <include layout='@layout/slideshow_mainactivity_nested_scrollview'/>
+
 </LinearLayout>
