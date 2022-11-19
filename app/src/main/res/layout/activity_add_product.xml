@@ -60,22 +60,23 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
             android:layout_margin="15dp"
+            android:orientation="vertical"
             tools:context=".Advertisement_application_Activity">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="30dp"
-                android:textStyle="bold"
                 android:gravity="center"
-                android:textColor="@color/green"
                 android:text="Edit your product"
-                android:textSize="30dp" />
+                android:textColor="@color/green"
+                android:textSize="30dp"
+                android:textStyle="bold" />
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -88,9 +89,9 @@
                     android:id="@+id/Product_id"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/custom_input"
                     android:inputType="number"
                     android:singleLine="true"
-                    android:background="@drawable/custom_input"
                     android:textColor="@color/black" />
 
 
@@ -107,11 +108,10 @@
                     android:id="@+id/Product_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/custom_input"
                     android:inputType="text"
                     android:singleLine="true"
-                    android:background="@drawable/custom_input"
-                    android:textColor="@color/black"
-                    />
+                    android:textColor="@color/black" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -125,15 +125,13 @@
                     android:id="@+id/ad_product_quantity"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/custom_input"
                     android:inputType="number"
                     android:singleLine="true"
-                    android:background="@drawable/custom_input"
                     android:textColor="@color/black" />
 
 
             </com.google.android.material.textfield.TextInputLayout>
-
-        
 
 
             <TextView
@@ -148,9 +146,9 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/custom_input"
                 android:hint="Name of Ingredient"
+                android:inputType="date"
                 android:minHeight="48dp"
                 android:paddingStart="12dp"
-                android:inputType="date"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
                 android:textSize="18dp" />
@@ -180,6 +178,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_margin="10dp"
                 android:hint="@string/loginPage_email"
                 android:text="@string/adApplication_Submit"
                 android:textColor="#5C6BC0"
@@ -193,7 +192,7 @@
             <Button
                 android:id="@+id/buttonDelete"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:hint="@string/loginPage_email"
                 android:text="Delete the Product"
@@ -205,9 +204,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.657" />
 
-            <include layout='@layout/slideshow_mainactivity_nested_scrollview'/>
-
-
+            <include layout='@layout/slideshow_mainactivity_nested_scrollview' />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

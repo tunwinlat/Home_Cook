@@ -20,4 +20,6 @@
     <string name="home_categories_title">Categories</string>
     <string name="storelisting_merchants_result_title">Merchants Result</string>
     <string name="adApplication_Submit">Submit</string>
+    <string name="btnPasswordUpdate">Update</string>
+    <string name="btnReportSubmit">Submit</string>
 </resources>

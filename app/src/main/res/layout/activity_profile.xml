@@ -1,251 +1,353 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".User_Profile_Activity"
-    android:orientation="vertical">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="260dp"
-        android:padding="15dp">
-
-        <ImageView
-            android:id="@+id/profile_pic"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_centerVertical="true"
-            android:src="@drawable/burger" />
-
-        <TextView
-            android:id="@+id/profile_profile"
-            android:textColor="@color/green"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="5dp"
-            android:layout_toRightOf="@+id/profile_pic"
-            android:text="{Name} Profile"
-            android:textSize="20dp" />
+    android:background="@android:color/background_light"
+    tools:context=".Advertisement_application_Activity">
 
 
-        <TextView
-            android:id="@+id/profile_accountType"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/profile_profile"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_toRightOf="@+id/profile_pic"
-            android:text="profile_accountType"
-            android:textSize="14dp" />
 
-        <TextView
-            android:id="@+id/profile_userID"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/profile_accountType"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginRight="10dp"
-
-            android:layout_toRightOf="@+id/profile_pic"
-            android:text="UserID is: "
-            android:textSize="14dp" />
-
-        <TextView
-            android:id="@+id/profile_userName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/profile_userID"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_toRightOf="@+id/profile_pic"
-            android:text="userName:"
-            android:textSize="14dp" />
-
-        <TextView
-            android:id="@+id/profile_email"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/profile_userName"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_toRightOf="@+id/profile_pic"
-            android:text="email:"
-            android:textSize="14dp" />
-
-        <TextView
-            android:id="@+id/profile_regDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/profile_email"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_toRightOf="@+id/profile_pic"
-            android:text="RegDate:"
-            android:textSize="14dp" />
-
-
-    </RelativeLayout>
-    <TextView
+    <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Change Password"
-        android:textColor="@color/green"
-        ></TextView>
-    <LinearLayout
+        android:layout_gravity="bottom"
+
+        android:background="@drawable/round_corner"
+        app:itemRippleColor="@color/purple_500"
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemIconSize="30dp"
+        app:labelVisibilityMode="unlabeled"
+        app:itemIconTint="@drawable/item_selector"
+        android:layout_margin="30dp"
+        android:elevation="2dp"
+        />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="1dp"
-        android:orientation="vertical">
-        <com.google.android.material.textfield.TextInputLayout
+        android:fitsSystemWindows="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Old Password">
-            <com.google.android.material.textfield.TextInputEditText
-                android:textColor="@color/green"
-                android:id="@+id/old_password"
-                android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/curvetoolbar"
+            app:layout_scrollFlags="enterAlwaysCollapsed"
+            app:subtitleTextColor="@color/black"
+            app:titleTextColor="@color/black">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/searchView"
+                android:layout_gravity="center"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:text="old password"
-                />
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="New Password">
-            <com.google.android.material.textfield.TextInputEditText
-                android:textColor="@color/green"
-                android:id="@+id/new_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="New password"
-                />
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Confirm Password">
-            <com.google.android.material.textfield.TextInputEditText
-                android:textColor="@color/green"
-                android:id="@+id/confirm_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="confirm password"
-                />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:background="@drawable/curvedsearchview"
+                app:queryHint="Search here..." />
+        </androidx.appcompat.widget.Toolbar>
 
 
-        <Button
-            android:id="@+id/buttonDelete"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Update"
-            android:textColor="#5C6BC0"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.526"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.657"></Button>
+    </com.google.android.material.appbar.AppBarLayout>
 
-    </LinearLayout>
-
-
-    <TextView
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Report"
-        android:textColor="@color/green"
-        ></TextView>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="1dp"
-        android:orientation="vertical">
-        <com.google.android.material.textfield.TextInputLayout
-
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Report title">
-            <com.google.android.material.textfield.TextInputEditText
-                android:textColor="@color/green"
-                android:id="@+id/report_title"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="15dp"
+            tools:context=".Advertisement_application_Activity">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:padding="15dp">
+
+                <ImageView
+                    android:id="@+id/profile_pic"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/burger" />
+
+
+                <TextView
+                    android:id="@+id/profile_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toRightOf="@+id/profile_pic"
+                    android:text="{Name} Profile"
+                    android:textColor="@color/green"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/profile_accountType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profile_profile"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/profile_pic"
+                    android:text="profile_accountType"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/profile_userID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profile_accountType"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+
+                    android:layout_toRightOf="@+id/profile_pic"
+                    android:text="UserID is: "
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/profile_userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profile_userID"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/profile_pic"
+                    android:text="userName:"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/profile_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profile_userName"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/profile_pic"
+                    android:text="email:"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/profile_regDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profile_email"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/profile_pic"
+                    android:text="RegDate:"
+                    android:textSize="14dp" />
+
+
+            </RelativeLayout>
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Please enter the details.."
-                />
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Report Content: ">
-            <com.google.android.material.textfield.TextInputEditText
+                android:text="Change Password"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
                 android:textColor="@color/green"
-                android:id="@+id/report_content"
+                android:layout_marginLeft="10dp"
+                ></TextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Please enter the details.."
-                />
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:hint="Report Category"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
-            <AutoCompleteTextView
-                android:textColor="@color/green"
-                android:id="@+id/report_categoryname1"
+                android:hint="Old Password:"
+                app:boxStrokeColor="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/oldPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:background="@drawable/custom_input"
+                    android:textColor="@color/black" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Category1"
-                />
-            <AutoCompleteTextView
-                android:textColor="@color/green"
-                android:id="@+id/report_categoryname2"
+                android:hint="New Password:"
+                app:boxStrokeColor="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/newPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:background="@drawable/custom_input"
+                    android:textColor="@color/black"
+                    />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Category2"
-                />
+                android:hint="Re-Enter New Password:"
+                app:boxStrokeColor="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/newPasswordConfirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:background="@drawable/custom_input"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnPasswordSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/btnPasswordUpdate"
+                android:layout_gravity="center"
+                android:textColor="#5C6BC0"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.526"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.657" />
+
+----------------------------------------------------------------------------------------
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Report"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:textColor="@color/green"
+                android:layout_marginLeft="10dp"
+                ></TextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Report Title:"
+                app:boxStrokeColor="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/reportTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:background="@drawable/custom_input"
+                    android:textColor="@color/black" />
 
 
-        </com.google.android.material.textfield.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Report Description:"
+                app:boxStrokeColor="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/add_Description"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/custom_input"
+                    android:gravity="fill_horizontal"
+                    android:inputType="text"
+                    android:singleLine="false"
+                    android:textColor="@color/black"
+                    android:textColorHint="#757575" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/custom_input">
+
+                <TextView
+                    android:id="@+id/reportCategories"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_weight="1"
+                    android:text="Report Categories"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:paddingBottom="10dp" />
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    android:layout_margin="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/reportCategories" />
 
 
-        <Button
-            android:id="@+id/buttonReport"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Report"
-            android:textColor="#5C6BC0"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.526"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.657"></Button>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </LinearLayout>
-    <include layout='@layout/slideshow_mainactivity_nested_scrollview'/>
 
-</LinearLayout>
+            <Button
+                android:id="@+id/btnReportSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btnReportSubmit"
+                android:layout_gravity="center"
+                android:textColor="#5C6BC0"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.526"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.657" />
+
+            <include layout='@layout/slideshow_mainactivity_nested_scrollview'/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
