@@ -2,14 +2,14 @@ package com.homecookapp.homecook;
 
 public class TableContents {
 
-    private String keyName;
+    private String ingredients;
 
     public TableContents (String _keyName){
-        this.keyName = _keyName;
+        this.ingredients = _keyName;
     }
 
 
-    public String getKeyName(){
-        return this.keyName;
+    public String getIngredients(){
+        return this.ingredients;
     }
 }

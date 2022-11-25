@@ -64,6 +64,8 @@ public class RegisterActivity extends AppCompatActivity {
         String email = tvEmail.getText().toString();
         String password = tvPassword1.getText().toString();
         String name = tvName.getText().toString();
+        final String ACCOUNT_STATUS = "clear";
+        final boolean SELLER = false;
 
         if(TextUtils.isEmpty(email)){
             tvEmail.setError("Please enter a valid email!!");
@@ -85,7 +87,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                         FirebaseUser mUser = mAuth.getCurrentUser();
 
-                        RWUsers writeUserDetails = new RWUsers(name);
+                        RWUsers writeUserDetails = new RWUsers(name, ACCOUNT_STATUS, SELLER);
 
                         //DatabaseReference referenceProfile = FirebaseDatabase.getInstance().getReference("Registered Users");
 

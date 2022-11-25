@@ -12,9 +12,10 @@ public class CreateDatabaseDemo {
 
     private FirebaseAuth mAuth;
 
-    private String tableName = "TableName";
-    private String keyName = "content";
-    private String primaryKey = "something";
+    private String tableName = "Dishes";
+    private String primaryKey = "Curry";
+    private String ingredients = "Onion,Garlic,Oil";
+
 
 
     public void setmAuth(FirebaseAuth _mAuth){
@@ -27,7 +28,7 @@ public class CreateDatabaseDemo {
 
     public void createDatabase(){
 
-        TableContents contents = new TableContents(keyName);
+        TableContents contents = new TableContents(ingredients);
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference referenceProfile = database.getReference(tableName);
 
