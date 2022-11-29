@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-
+android:id="@+id/bottomNav"
         android:background="@drawable/round_corner"
         app:itemRippleColor="@color/purple_500"
         app:menu="@menu/bottom_navigation_menu"
