@@ -48,7 +48,7 @@ public class addProduct_Activity extends AppCompatActivity {
     private String dishName = "nothing";
     private EditText quantity;
     private String [] ingredients;
-    private EditText description;
+    private EditText description, foodName, foodQuantity;
     private Button submit, select;
     private FirebaseAuth mAuth;
     private FirebaseUser mUser;
@@ -57,6 +57,7 @@ public class addProduct_Activity extends AppCompatActivity {
     private DatabaseReference referenceProfile;
     private TextView listIngredients;
     Uri selectedImage, downloadUri;
+    private String selectedItem, downloadString, desString;
 
     public void setSelectedImage(Uri result){
         selectedImage = result;
@@ -75,8 +76,12 @@ public class addProduct_Activity extends AppCompatActivity {
         select = findViewById(R.id.btnSelectImage);
         listIngredients = findViewById(R.id.tvListIngredients);
         description = findViewById(R.id.product_Description);
+        foodName = findViewById(R.id.txtProductName);
+        foodQuantity = findViewById(R.id.ad_product_quantity);
         selectedImage = Uri.EMPTY;
         downloadUri = Uri.EMPTY;
+        selectedItem = "";
+        downloadString = "";
 
         //Uri selectedImage2 = Uri.EMPTY;
 
@@ -166,7 +171,7 @@ public class addProduct_Activity extends AppCompatActivity {
                                                int position, long id) {
 //
                         ((TextView) parent.getChildAt(0)).setTextColor(Color.BLACK);
-                        String selectedItem = dNames[position];
+                        selectedItem = dNames[position];
                         String ingredients = dataSnapshot.child(selectedItem).getValue().toString();
                         ingredients = ingredients.substring(13);
                         ingredients = ingredients.substring(0, ingredients.length() - 1);
@@ -199,7 +204,39 @@ public class addProduct_Activity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
 
-                        System.out.println(downloadUri.toString());
+                        FirebaseUser mUser = mAuth.getCurrentUser();
+
+                        String fdName = foodName.getText().toString();
+
+                        String fdQuantity = foodQuantity.getText().toString();
+
+                        downloadString = downloadUri.toString();
+
+                        desString = description.getText().toString();
+
+                        NewPost newPost = new NewPost(fdName, selectedItem, fdQuantity, desString, downloadString);
+
+                        //DatabaseReference referenceProfile = FirebaseDatabase.getInstance().getReference("Registered Users");
+
+                        FirebaseDatabase database = FirebaseDatabase.getInstance();
+                        DatabaseReference referenceProfile = database.getReference("Posts");
+                        String primaryKey = mUser.getUid().toString();
+
+                        referenceProfile.child(primaryKey).setValue(newPost).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+
+                                Toast.makeText(getApplicationContext(),
+                                                "New Post Successfully Submitted",
+                                                Toast.LENGTH_LONG)
+                                        .show();
+
+                                Intent intent
+                                        = new Intent(addProduct_Activity.this,
+                                        HomeActivity.class);
+                                startActivity(intent);
+                            }
+                        });
                     }
                 });
 

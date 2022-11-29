@@ -43,7 +43,21 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Product_detail_Activity"
+            android:name=".Product_detail_Activity1"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Product_detail_Activity2"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Product_detail_Activity3"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

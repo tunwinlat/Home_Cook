@@ -79,6 +79,27 @@
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtProductName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:hint="Food Name"
+                    android:inputType="textShortMessage"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/addproduct_ProductQualtityHint"
+                app:boxStrokeColor="@color/black"/>
+
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
@@ -88,6 +109,16 @@
                 android:text="@string/addproduct_DishNameTitle"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/addproduct_ProductQualtityHint"
+                app:boxStrokeColor="@color/black">
+
+
+            </com.google.android.material.textfield.TextInputLayout>
 
             <Spinner
                 android:id="@+id/productSpinner"

@@ -2,21 +2,31 @@ package com.homecookapp.homecook;
 
 public class NewPost {
 
-    private String name, accountStatus;
-    private boolean seller;
+    private String name, type, quantity, description, uri;
 
-    public NewPost(String _name, String _accountStatus, boolean _seller){
+    public NewPost(){
+
+    }
+
+
+    public NewPost(String _name, String _type, String _quantity, String _description, String _uri){
 
         this.name = _name;
-        this.accountStatus = _accountStatus;
-        this.seller = _seller;
+        this.type = _type;
+        this.quantity = _quantity;
+        this.description = _description;
+        this.uri = _uri;
     }
 
     public String getName(){
         return name;
     }
 
-    public String getAccountStatus() { return accountStatus; }
+    public String getType() {return type;}
 
-    public boolean getSeller() { return  seller; }
+    public String getQuantity() {return quantity;}
+
+    public String getDescription() {return description;}
+
+    public String getUri() {return uri;}
 }

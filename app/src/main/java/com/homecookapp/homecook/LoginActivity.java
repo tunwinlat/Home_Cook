@@ -9,6 +9,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -19,6 +20,7 @@ import com.google.firebase.auth.AuthResult;
 public class LoginActivity extends AppCompatActivity {
 
     private EditText tvEmail, tvPassword;
+    private TextView tvRegister;
     private Button btnLogin;
     //private ProgressBar pgBar;
     private FirebaseAuth mAuth;
@@ -33,6 +35,7 @@ public class LoginActivity extends AppCompatActivity {
         tvEmail = findViewById(R.id.txtRegEmail);
         tvPassword = findViewById(R.id.txtPassword);
         btnLogin = findViewById(R.id.btnLogin2);
+        tvRegister = findViewById(R.id.tvRegisterq);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,6 +44,13 @@ public class LoginActivity extends AppCompatActivity {
                 userLogin();
             }
         });
+        tvRegister.setOnClickListener(v -> {
+
+            Intent intent
+                    = new Intent(LoginActivity.this,
+                    RegisterActivity.class);
+            startActivity(intent);
+        });
     }
 
     private void userLogin(){
@@ -48,18 +58,14 @@ public class LoginActivity extends AppCompatActivity {
         String password = tvPassword.getText().toString();
 
         if(TextUtils.isEmpty(email)){
-            Toast.makeText(getApplicationContext(),
-                            "Please enter email!!",
-                            Toast.LENGTH_LONG)
-                    .show();
+            tvEmail.setError("Please enter a valid email address");
+            tvEmail.requestFocus();
             return;
         }
 
         if (TextUtils.isEmpty(password)) {
-            Toast.makeText(getApplicationContext(),
-                            "Please enter password!!",
-                            Toast.LENGTH_LONG)
-                    .show();
+            tvPassword.setError("Password field cannot be empty");
+            tvPassword.requestFocus();
             return;
         }
 
@@ -79,7 +85,7 @@ public class LoginActivity extends AppCompatActivity {
 
                                     Intent intent
                                             = new Intent(LoginActivity.this,
-                                            addProduct_Activity.class);
+                                            HomeActivity.class);
                                     startActivity(intent);
                                 }
 

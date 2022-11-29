@@ -4,7 +4,7 @@
     <string name="main_btn_login">Log In</string>
     <string name="login_lbl_email">Email</string>
     <string name="login_lbl_password">Password</string>
-    <string name="RegistionInformation">Registion Information</string>
+    <string name="RegistionInformation">Registeration Information</string>
     <string name="login_btn_login">Login</string>
     <string name="loginPage_email">Please enter email</string>
     <string name="loginPage_password">Please enter password</string>
@@ -27,7 +27,7 @@
     <string name="addproduct_ProductNameHint">Product Name:</string>
     <string name="addproduct_ProductQualtityHint">Product Quantity:</string>
     <string name="addproduct_ChangeOfIngredientsTitle">List of Ingredients</string>
-    <string name="addproduct_DishNameTitle">Choose Food Name</string>
+    <string name="addproduct_DishNameTitle">Choose Food Type</string>
     <string name="addproduct_IngredientName">Name of Ingredients</string>
     <string name="addproduct_ProductDescription">Product Description:</string>
     <string name="addproduct_btnDeleteProduct">Delete the Product</string>
