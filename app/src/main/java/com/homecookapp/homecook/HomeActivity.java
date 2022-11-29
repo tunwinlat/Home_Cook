@@ -15,9 +15,12 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.view.MenuItem;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -48,6 +51,38 @@ public class HomeActivity extends AppCompatActivity {
         content1 = findViewById(R.id.tvContent1);
         content2 = findViewById(R.id.tvContent2);
         content3 = findViewById(R.id.tvContent3);
+
+
+//        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavigationView);
+//
+//        bottomNavigationView.setSelectedItemId(R.id.nav_home);
+//
+//        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+//            @Override
+//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//
+//                switch(item.getItemId())
+//                {
+//                    case R.id.nav_home:
+//                        startActivity(new Intent(getApplicationContext(),HomeActivity.class));
+//                        overridePendingTransition(0,0);
+//                        return true;
+//                    case R.id.nav_profile:
+//                        startActivity(new Intent(getApplicationContext(),User_Profile_Activity.class));
+//                        overridePendingTransition(0,0);
+//                        return true;
+//                    case R.id.nav_setting:
+//                        Toast.makeText(getApplicationContext(),
+//                                        "Feature coming soon!!",
+//                                        Toast.LENGTH_LONG)
+//                                .show();
+//                        overridePendingTransition(0,0);
+//                        return true;
+//                }
+//                return false;
+//            }
+//        });
+
 
         FirebaseDatabase database;
         DatabaseReference referenceProfile;
