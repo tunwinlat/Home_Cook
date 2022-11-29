@@ -10,20 +10,55 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class Merchant_Inventory_Activity extends AppCompatActivity {
     BottomNavigationView nav;
     Button addproductbtn;
+    FirebaseAuth mAuth;
+    FirebaseUser mUser;
+    String name, type;
+    TextView merchantName, merchantStatus;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_store_inventory);
 
+        mAuth = FirebaseAuth.getInstance();
+        mUser = mAuth.getCurrentUser();
         addproductbtn = findViewById(R.id.btnAddProduct);
+
+        FirebaseDatabase database;
+        DatabaseReference referenceProfile;
+
+        database = FirebaseDatabase.getInstance();
+        referenceProfile = database.getReference("Posts");
+        referenceProfile.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                NewPost np = snapshot.child(mUser.getUid()).getValue(NewPost.class);
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
         addproductbtn.setOnClickListener(new View.OnClickListener() {
             @Override
