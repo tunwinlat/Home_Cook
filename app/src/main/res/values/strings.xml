@@ -72,6 +72,7 @@
     <string name="editProduct_ChangeOfIngredientsTitle">Changes of Ingredient:</string>
     <string name="editProduct_IngredientName">Name of Ingredient:</string>
     <string name="editProduct_ProductDescription">Product Desccription:</string>
+    <string name="select_Image">Select Image</string>
 
 
 </resources>

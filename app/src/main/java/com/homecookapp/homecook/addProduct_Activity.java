@@ -1,9 +1,16 @@
 package com.homecookapp.homecook;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.PickVisualMediaRequest;
+import androidx.activity.result.contract.ActivityResultContract;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.Manifest;
+import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,6 +22,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.Continuation;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -22,6 +34,13 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+
+import java.util.concurrent.TimeUnit;
+
+import pub.devrel.easypermissions.EasyPermissions;
 
 public class addProduct_Activity extends AppCompatActivity {
 
@@ -30,13 +49,18 @@ public class addProduct_Activity extends AppCompatActivity {
     private EditText quantity;
     private String [] ingredients;
     private EditText description;
-    private Button submit;
+    private Button submit, select;
     private FirebaseAuth mAuth;
     private FirebaseUser mUser;
     private Spinner dishSpinner;
     private FirebaseDatabase database;
     private DatabaseReference referenceProfile;
     private TextView listIngredients;
+    Uri selectedImage, downloadUri;
+
+    public void setSelectedImage(Uri result){
+        selectedImage = result;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,14 +72,71 @@ public class addProduct_Activity extends AppCompatActivity {
         quantity = findViewById(R.id.ad_product_quantity);
         dishSpinner = findViewById(R.id.productSpinner);
         submit = findViewById(R.id.btnSubmit);
+        select = findViewById(R.id.btnSelectImage);
         listIngredients = findViewById(R.id.tvListIngredients);
         description = findViewById(R.id.product_Description);
+        selectedImage = Uri.EMPTY;
+        downloadUri = Uri.EMPTY;
+
+        //Uri selectedImage2 = Uri.EMPTY;
+
+        ActivityResultLauncher<PickVisualMediaRequest> pickMedia =
+                registerForActivityResult(new ActivityResultContracts.PickVisualMedia(), uri -> {
+                    // Callback is invoked after the user selects a media item or closes the
+                    // photo picker.
+                    if (uri != null) {
+                        Log.d("PhotoPicker", "Selected URI: " + uri);
+                        selectedImage = uri;
+                        FirebaseStorage storage = FirebaseStorage.getInstance();
+                        StorageReference storageRef = storage.getReference();
+                        StorageReference riversRef = storageRef.child("images/"+selectedImage.getLastPathSegment());
+                        UploadTask uploadTask = riversRef.putFile(selectedImage);
+
+                        uploadTask.addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception exception) {
+                                // Handle unsuccessful uploads
+                            }
+                        }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                            @Override
+                            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                                // taskSnapshot.getMetadata() contains file metadata such as size, content-type, etc.
+                                // ...
+                            }
+                        });
+                        Task<Uri> urlTask = uploadTask.continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
+                            @Override
+                            public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception {
+                                if (!task.isSuccessful()) {
+                                    throw task.getException();
+                                }
+
+                                // Continue with the task to get the download URL
+                                return riversRef.getDownloadUrl();
+                            }
+                        }).addOnCompleteListener(new OnCompleteListener<Uri>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Uri> task) {
+                                if (task.isSuccessful()) {
+                                    downloadUri = task.getResult();
+                                } else {
+                                    // Handle failures
+                                    // ...
+                                }
+                            }
+                        });
+                    } else {
+                        Log.d("PhotoPicker", "No media selected");
+                    }
+                });
+
 
         database = FirebaseDatabase.getInstance();
         referenceProfile = database.getReference("Dishes");
         referenceProfile.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
 
 
                 dishName = dataSnapshot.getValue().toString();
@@ -92,18 +173,7 @@ public class addProduct_Activity extends AppCompatActivity {
                         //Toast.makeText(addProduct_Activity.this, ingredients, Toast.LENGTH_SHORT).show();
                         listIngredients.setText(ingredients);
 
-                        switch (position) {
-                            case 0:
-                                // Whatever you want to happen when the first item gets selected
-                                break;
-                            case 1:
-                                // Whatever you want to happen when the second item gets selected
-                                break;
-                            case 2:
-                                // Whatever you want to happen when the thrid item gets selected
-                                break;
 
-                        }
                     }
 
                     @Override
@@ -113,10 +183,23 @@ public class addProduct_Activity extends AppCompatActivity {
                 });
 
 
+
+                select.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                    pickMedia.launch(new PickVisualMediaRequest.Builder()
+                                .setMediaType(ActivityResultContracts.PickVisualMedia.ImageOnly.INSTANCE)
+                                .build());
+
+                    }
+                });
+
                 submit.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
 
+                        System.out.println(downloadUri.toString());
                     }
                 });
 
