@@ -79,7 +79,7 @@ public class LoginActivity extends AppCompatActivity {
 
                                     Intent intent
                                             = new Intent(LoginActivity.this,
-                                            HomeActivity.class);
+                                            addProduct_Activity.class);
                                     startActivity(intent);
                                 }
 

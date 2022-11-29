@@ -27,6 +27,7 @@
     <string name="addproduct_ProductNameHint">Product Name:</string>
     <string name="addproduct_ProductQualtityHint">Product Quantity:</string>
     <string name="addproduct_ChangeOfIngredientsTitle">List of Ingredients</string>
+    <string name="addproduct_DishNameTitle">Choose Food Name</string>
     <string name="addproduct_IngredientName">Name of Ingredients</string>
     <string name="addproduct_ProductDescription">Product Description:</string>
     <string name="addproduct_btnDeleteProduct">Delete the Product</string>

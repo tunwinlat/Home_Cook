@@ -79,41 +79,24 @@
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            <TextView
+                android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/addproduct_ProductIDHint"
-                app:boxStrokeColor="@color/black">
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="@string/addproduct_DishNameTitle"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/addproduct_ProductID"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/custom_input"
-                    android:inputType="number"
-                    android:singleLine="true"
-                    android:textColor="@color/black" />
-
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            <Spinner
+                android:id="@+id/productSpinner"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/addproduct_ProductNameHint"
-                app:boxStrokeColor="@color/black">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/addproduct_ProductName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/custom_input"
-                    android:inputType="text"
-                    android:singleLine="true"
-                    android:textColor="@color/black" />
-            </com.google.android.material.textfield.TextInputLayout>
+                android:layout_height="49dp"
+                android:layout_weight="1"
+                android:forceDarkAllowed="false"
+                android:popupBackground="@color/white"
+                android:spinnerMode="dropdown" />
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -140,6 +123,7 @@
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:text="@string/addproduct_ChangeOfIngredientsTitle"
+                android:textColor="@color/black"
                 android:textSize="15sp" />
 
             <EditText
