@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -18,6 +19,8 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -36,6 +39,8 @@ public class HomeActivity extends AppCompatActivity {
     RecyclerView recyclerViewCategoryList;
     TextView title1, title2, title3, content1, content2, content3;
     int carryID;
+
+    BottomNavigationView nav;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,6 +99,32 @@ public class HomeActivity extends AppCompatActivity {
                 content1.setText(forContent[0]);
                 content2.setText(forContent[1]);
                 content3.setText(forContent[2]);
+
+                nav = findViewById(R.id.bottomNav);
+
+                nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                        switch (item.getItemId()) {
+                            case R.id.nav_home:
+                                startActivity(new Intent(HomeActivity.this, HomeActivity.class));
+                                break;
+                            case R.id.nav_like:
+                                startActivity(new Intent(HomeActivity.this, Merchant_Inventory_Activity.class));
+                                break;
+                            case R.id.nav_profile:
+                                startActivity(new Intent(HomeActivity.this, User_Profile_Activity.class));
+                                break;
+                            case R.id.nav_setting:
+                                startActivity(new Intent(HomeActivity.this, HomeActivity.class));
+                                break;
+                            default:
+                                startActivity(new Intent(HomeActivity.this, HomeActivity.class));
+                        return true;
+                    }
+                    return false;}
+                });
 
 
             }
