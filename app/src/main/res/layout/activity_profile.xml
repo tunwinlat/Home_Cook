@@ -105,54 +105,22 @@
                     android:layout_marginEnd="10dp"
                     android:layout_toEndOf="@+id/profile_pic"
                     android:text="@string/userProfile_AccountType"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@+id/profile_userID"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/profile_accountType"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-
-                    android:layout_toEndOf="@+id/profile_pic"
-                    android:text="@string/userProfile_UserID"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@+id/profile_userName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/profile_userID"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_toEndOf="@+id/profile_pic"
-                    android:text="@string/userProfile_Username2"
+                    android:textColor="@color/black"
                     android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/profile_email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/profile_userName"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="10dp"
+                    android:layout_below="@+id/profile_accountType"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="37dp"
                     android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="22dp"
                     android:layout_toEndOf="@+id/profile_pic"
                     android:text="@string/userProfile_UserEmail"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@+id/profile_regDate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/profile_email"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_toEndOf="@+id/profile_pic"
-                    android:text="@string/userProfile_regDate"
+                    android:textColor="@color/black"
                     android:textSize="14sp" />
 
 
@@ -178,9 +146,9 @@
                     android:id="@+id/oldPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="number"
-                    android:singleLine="true"
                     android:background="@drawable/custom_input"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
                     android:textColor="@color/black" />
 
 
@@ -197,11 +165,10 @@
                     android:id="@+id/newPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text"
-                    android:singleLine="true"
                     android:background="@drawable/custom_input"
-                    android:textColor="@color/black"
-                    />
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textColor="@color/black" />
 
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -217,9 +184,9 @@
                     android:id="@+id/newPasswordConfirm"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text"
-                    android:singleLine="true"
                     android:background="@drawable/custom_input"
+                    android:inputType="text|textPassword"
+                    android:singleLine="true"
                     android:textColor="@color/black" />
             </com.google.android.material.textfield.TextInputLayout>
 

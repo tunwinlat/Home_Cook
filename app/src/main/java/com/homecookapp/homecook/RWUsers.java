@@ -5,6 +5,10 @@ public class RWUsers {
     private String name, accountStatus;
     private boolean seller;
 
+    public RWUsers(){
+
+    }
+
     public RWUsers(String _name, String _accountStatus, boolean _seller){
 
         this.name = _name;
