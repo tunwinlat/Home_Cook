@@ -2,22 +2,34 @@ package com.homecookapp.homecook;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Merchant_Inventory_Activity extends AppCompatActivity {
     BottomNavigationView nav;
+    Button addproductbtn = findViewById(R.id.btnAddProduct);
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_store_inventory);
+
+        addproductbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Merchant_Inventory_Activity.this, addProduct_Activity.class));
+
+            }
+        });
 
         nav = findViewById(R.id.bottomNav);
         nav.setSelectedItemId(R.id.nav_home);
@@ -44,5 +56,7 @@ public class Merchant_Inventory_Activity extends AppCompatActivity {
                 }
                 return false;}
         });
+
+
     }
 }
