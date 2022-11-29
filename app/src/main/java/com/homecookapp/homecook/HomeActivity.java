@@ -48,7 +48,7 @@ public class HomeActivity extends AppCompatActivity {
 
 
 
-                title1 = findViewById(R.id.tvTitle1);
+        title1 = findViewById(R.id.tvTitle1);
         title2 = findViewById(R.id.tvTitle2);
         title3 = findViewById(R.id.tvTitle3);
         content1 = findViewById(R.id.tvContent1);
