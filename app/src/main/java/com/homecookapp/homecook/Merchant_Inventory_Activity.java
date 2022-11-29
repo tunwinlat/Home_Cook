@@ -16,18 +16,20 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Merchant_Inventory_Activity extends AppCompatActivity {
     BottomNavigationView nav;
-    Button addproductbtn = findViewById(R.id.btnAddProduct);
+    Button addproductbtn;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_store_inventory);
 
+        addproductbtn = findViewById(R.id.btnAddProduct);
+
         addproductbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Merchant_Inventory_Activity.this, addProduct_Activity.class));
-
+                Intent i = new Intent(Merchant_Inventory_Activity.this, addProduct_Activity.class);
+                startActivity(i);
             }
         });
 
