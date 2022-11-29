@@ -22,13 +22,6 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".NavigationAcitivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".RegisterActivity"
             android:exported="false">
             <meta-data
@@ -72,7 +65,7 @@
         </activity>
         <activity
             android:name=".Merchant_Inventory_Activity"
-            android:exported="false">
+            android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -113,7 +106,7 @@
         </activity>
         <activity
             android:name=".HomeActivity"
-            android:exported="false">
+            android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

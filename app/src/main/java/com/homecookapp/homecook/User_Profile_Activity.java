@@ -3,7 +3,9 @@ package com.homecookapp.homecook;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,6 +14,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.EmailAuthProvider;
@@ -36,6 +39,32 @@ public class User_Profile_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+        BottomNavigationView nav;
+        nav = findViewById(R.id.bottomNav);
+        nav.setSelectedItemId(R.id.nav_home);
+        nav.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch (item.getItemId()) {
+                    case R.id.nav_home:
+                        startActivity(new Intent(User_Profile_Activity.this, HomeActivity.class));
+                        break;
+                    case R.id.nav_like:
+                        startActivity(new Intent(User_Profile_Activity.this, Merchant_Inventory_Activity.class));
+                        break;
+                    case R.id.nav_profile:
+                        startActivity(new Intent(User_Profile_Activity.this, User_Profile_Activity.class));
+                        break;
+                    case R.id.nav_setting:
+                        Toast.makeText(User_Profile_Activity.this, "Feature Coming Soon", Toast.LENGTH_SHORT).show();
+                        break;
+                    default:
+                        startActivity(new Intent(User_Profile_Activity.this, HomeActivity.class));
+                        return true;
+                }
+                return false;}
+        });
 
         profile = findViewById(R.id.profile_profile);
         email = findViewById(R.id.profile_email);
@@ -66,6 +95,8 @@ public class User_Profile_Activity extends AppCompatActivity {
                 profile.setText(userName);
                 email.setText("Email: "+userEmail);
                 accountType.setText("Account Status: " + userAccountType);
+
+
 
             }
 

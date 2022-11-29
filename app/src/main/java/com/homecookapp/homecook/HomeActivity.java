@@ -118,7 +118,7 @@ public class HomeActivity extends AppCompatActivity {
                                 startActivity(new Intent(HomeActivity.this, User_Profile_Activity.class));
                                 break;
                             case R.id.nav_setting:
-                                startActivity(new Intent(HomeActivity.this, HomeActivity.class));
+                                Toast.makeText(HomeActivity.this, "Feature Coming Soon", Toast.LENGTH_SHORT).show();
                                 break;
                             default:
                                 startActivity(new Intent(HomeActivity.this, HomeActivity.class));
