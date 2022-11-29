@@ -126,16 +126,18 @@
                 android:textColor="@color/black"
                 android:textSize="15sp" />
 
-            <EditText
+            <TextView
+                android:id="@+id/tvListIngredients"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="83dp"
                 android:background="@drawable/custom_input"
                 android:hint="@string/addproduct_IngredientName"
-                android:inputType="date"
+                android:inputType="textMultiLine"
                 android:minHeight="48dp"
                 android:paddingStart="12dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
+                android:textColor="@color/black"
                 android:textSize="18sp"
                 tools:ignore="RtlSymmetry" />
 

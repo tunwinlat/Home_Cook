@@ -36,6 +36,7 @@ public class addProduct_Activity extends AppCompatActivity {
     private Spinner dishSpinner;
     private FirebaseDatabase database;
     private DatabaseReference referenceProfile;
+    private TextView listIngredients;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +48,8 @@ public class addProduct_Activity extends AppCompatActivity {
         quantity = findViewById(R.id.ad_product_quantity);
         dishSpinner = findViewById(R.id.productSpinner);
         submit = findViewById(R.id.btnSubmit);
+        listIngredients = findViewById(R.id.tvListIngredients);
+        description = findViewById(R.id.product_Description);
 
         database = FirebaseDatabase.getInstance();
         referenceProfile = database.getReference("Dishes");
@@ -86,8 +89,8 @@ public class addProduct_Activity extends AppCompatActivity {
                         String ingredients = dataSnapshot.child(selectedItem).getValue().toString();
                         ingredients = ingredients.substring(13);
                         ingredients = ingredients.substring(0, ingredients.length() - 1);
-                        Toast.makeText(addProduct_Activity.this, ingredients, Toast.LENGTH_SHORT).show();
-
+                        //Toast.makeText(addProduct_Activity.this, ingredients, Toast.LENGTH_SHORT).show();
+                        listIngredients.setText(ingredients);
 
                         switch (position) {
                             case 0:
@@ -105,6 +108,14 @@ public class addProduct_Activity extends AppCompatActivity {
 
                     @Override
                     public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                });
+
+
+                submit.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
 
                     }
                 });
