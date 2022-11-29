@@ -2,15 +2,15 @@ package com.homecookapp.homecook;
 
 public class DishName {
 
-    private String name;
+    private String Ingredients;
 
     public DishName(String _name){
 
-        this.name = _name;
+        this.Ingredients = _name;
 
     }
 
-    public String getName() {
-        return name;
+    public String getIngredients() {
+        return Ingredients;
     }
 }

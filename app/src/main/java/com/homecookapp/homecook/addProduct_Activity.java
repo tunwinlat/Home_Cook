@@ -82,6 +82,13 @@ public class addProduct_Activity extends AppCompatActivity {
                                                int position, long id) {
 //
                         ((TextView) parent.getChildAt(0)).setTextColor(Color.BLACK);
+                        String selectedItem = dNames[position];
+                        String ingredients = dataSnapshot.child(selectedItem).getValue().toString();
+                        ingredients = ingredients.substring(13);
+                        ingredients = ingredients.substring(0, ingredients.length() - 1);
+                        Toast.makeText(addProduct_Activity.this, ingredients, Toast.LENGTH_SHORT).show();
+
+
                         switch (position) {
                             case 0:
                                 // Whatever you want to happen when the first item gets selected
@@ -112,12 +119,6 @@ public class addProduct_Activity extends AppCompatActivity {
                 Toast.makeText(addProduct_Activity.this, "Fail to get data.", Toast.LENGTH_SHORT).show();
             }
         });
-
-
-        for(int i=0; i<dishNames.length -1; i++){
-            System.out.println(dishNames[i]);
-            System.out.println("second");
-        }
 
 
 
