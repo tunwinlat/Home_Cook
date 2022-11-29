@@ -39,7 +39,6 @@ public class HomeActivity extends AppCompatActivity {
     RecyclerView recyclerViewCategoryList;
     TextView title1, title2, title3, content1, content2, content3;
     int carryID;
-
     BottomNavigationView nav;
 
     @Override
@@ -47,7 +46,9 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        title1 = findViewById(R.id.tvTitle1);
+
+
+                title1 = findViewById(R.id.tvTitle1);
         title2 = findViewById(R.id.tvTitle2);
         title3 = findViewById(R.id.tvTitle3);
         content1 = findViewById(R.id.tvContent1);
@@ -101,8 +102,8 @@ public class HomeActivity extends AppCompatActivity {
                 content3.setText(forContent[2]);
 
                 nav = findViewById(R.id.bottomNav);
-
-                nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+                nav.setSelectedItemId(R.id.nav_home);
+                nav.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
