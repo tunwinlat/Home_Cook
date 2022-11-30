@@ -28,7 +28,6 @@ public class Product_detail_Activity2 extends AppCompatActivity {
 
     TextView title, quantity, description, request;
     ImageView photo;
-    BottomNavigationView nav;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -47,32 +46,6 @@ public class Product_detail_Activity2 extends AppCompatActivity {
 
         FirebaseDatabase database;
         DatabaseReference referenceProfile;
-
-        nav = findViewById(R.id.bottomNav);
-        nav.setSelectedItemId(R.id.nav_home);
-        nav.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
-                switch (item.getItemId()) {
-                    case R.id.nav_home:
-                        startActivity(new Intent(Product_detail_Activity2.this, HomeActivity.class));
-                        break;
-                    case R.id.nav_like:
-                        startActivity(new Intent(Product_detail_Activity2.this, Merchant_Inventory_Activity.class));
-                        break;
-                    case R.id.nav_profile:
-                        startActivity(new Intent(Product_detail_Activity2.this, User_Profile_Activity.class));
-                        break;
-                    case R.id.nav_setting:
-                        Toast.makeText(Product_detail_Activity2.this, "Feature Coming Soon", Toast.LENGTH_SHORT).show();
-                        break;
-                    default:
-                        startActivity(new Intent(Product_detail_Activity2.this, HomeActivity.class));
-                        return true;
-                }
-                return false;}
-        });
 
         database = FirebaseDatabase.getInstance();
         referenceProfile = database.getReference("Posts");
