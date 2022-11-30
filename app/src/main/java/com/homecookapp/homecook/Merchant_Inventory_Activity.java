@@ -64,7 +64,7 @@ public class Merchant_Inventory_Activity extends AppCompatActivity {
                 type = rw.getAccountStatus();
 
                 merchantName.setText(name);
-                merchantStatus.setText(type);
+                merchantStatus.setText("Account Status: "+type);
 
 
 

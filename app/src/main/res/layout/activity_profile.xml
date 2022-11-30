@@ -69,7 +69,7 @@ android:id="@+id/bottomNav"
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="260dp"
+                android:layout_height="231dp"
                 android:padding="15dp">
 
                 <ImageView
@@ -205,107 +205,8 @@ android:id="@+id/bottomNav"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.657" />
 
-----------------------------------------------------------------------------------------
+            ----------------------------------------------------------------------------------------
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/userProfile_ReportTitle"
-                android:layout_marginTop="20dp"
-                android:textSize="20sp"
-                android:textColor="@color/green"
-                android:layout_marginStart="10dp" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/userProfile_ReportTitleHint"
-                app:boxStrokeColor="@color/black">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/reportTitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="number"
-                    android:singleLine="true"
-                    android:background="@drawable/custom_input"
-                    android:textColor="@color/black" />
-
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/userProfile_ReportDescriptionHint"
-                app:boxStrokeColor="@color/black">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/add_Description"
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:background="@drawable/custom_input"
-                    android:gravity="fill_horizontal"
-                    android:inputType="text"
-                    android:singleLine="false"
-                    android:textColor="@color/black"
-                    android:textColorHint="#757575" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="3dp"
-                android:background="@drawable/custom_input">
-
-                <TextView
-                    android:id="@+id/reportCategories"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
-                    android:layout_weight="1"
-                    android:text="userProfile_ReportCategoryTitle"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:paddingBottom="10dp" />
-
-                <Spinner
-                    android:id="@+id/spinner"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:layout_weight="1"
-                    android:minHeight="48dp"
-                    android:layout_margin="10dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/reportCategories" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-            <Button
-                android:id="@+id/btnReportSubmit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/btnReportSubmit"
-                android:layout_gravity="center"
-                android:textColor="#5C6BC0"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.526"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.657" />
-
-            <include layout='@layout/slideshow_mainactivity_nested_scrollview'/>
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
