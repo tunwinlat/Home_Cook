@@ -85,7 +85,7 @@ public class LoginActivity extends AppCompatActivity {
 
                                     Intent intent
                                             = new Intent(LoginActivity.this,
-                                            addProduct_Activity.class);
+                                            HomeActivity.class);
                                     startActivity(intent);
                                 }
 

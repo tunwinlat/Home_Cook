@@ -40,16 +40,33 @@ public class Merchant_Inventory_Activity extends AppCompatActivity {
         mUser = mAuth.getCurrentUser();
         addproductbtn = findViewById(R.id.btnAddProduct);
 
+        name = "";
+        type = "";
+
+        merchantName = findViewById(R.id.merchantInventoryTitle);
+        merchantStatus = findViewById(R.id.merchantStatus);
+
+
+
         FirebaseDatabase database;
         DatabaseReference referenceProfile;
 
         database = FirebaseDatabase.getInstance();
-        referenceProfile = database.getReference("Posts");
+        referenceProfile = database.getReference("RegisteredUsers");
         referenceProfile.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                NewPost np = snapshot.child(mUser.getUid()).getValue(NewPost.class);
+                RWUsers rw = snapshot.child(mUser.getUid()).getValue(RWUsers.class);
+                //NewPost np = snapshot.child(mUser.getUid()).getValue(NewPost.class);
+
+                name = rw.getName();
+                type = rw.getAccountStatus();
+
+                merchantName.setText(name);
+                merchantStatus.setText(type);
+
+
 
 
             }
